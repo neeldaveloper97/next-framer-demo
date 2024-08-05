@@ -44,11 +44,14 @@ export default function Navbar() {
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing" >
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/en/pricing">Pricing details</HoveredLink>
-          </div>
-        </MenuItem>
+        <Link href={"/en/pricing"}>
+          {" "}
+          <MenuItem setActive={setActive} active={active} item="Pricing">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/en/pricing">Pricing details</HoveredLink>
+            </div>
+          </MenuItem>
+        </Link>
       </Menu>
     </div>
   );
